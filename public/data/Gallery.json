@@ -1,0 +1,47 @@
+{
+  "name": "Gallery",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the image"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the image"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the image"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "School Events",
+        "Classroom Activities",
+        "Graduation Ceremonies",
+        "Sports & Recreation",
+        "Islamic Celebrations",
+        "Field Trips",
+        "Arts & Crafts",
+        "Other"
+      ],
+      "description": "Category of the image"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the event/photo was taken"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this image should be featured"
+    }
+  },
+  "required": [
+    "title",
+    "image_url",
+    "category"
+  ]
+}
